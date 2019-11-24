@@ -13,6 +13,7 @@ This project demonstrates how to burn an Arduino Nano bootloader through an Ardu
     * [Usage](#usage)
     * [1. Make the Uno an ISP](#1-make-the-uno-an-isp)
     * [2. Burn Bootloader to Nano](#2-burn-bootloader-to-nano)
+    * [3. Test the Nano with the Blink sketch](#3-test-the-nano-with-the-blink-sketch)
 * [Etc](#etc)
     * [Further Reading](#further-reading)
     * [Thanks](#thanks)
@@ -68,20 +69,26 @@ Documentation
 #### Usage
 
 ```
-make isp            -- upload sketch to make Uno into an ISP
-make bootloader     -- burn the bootloader to Nano
-make                -- do both
+make help           -- show usage
+make isp            -- upload sketch to make the Uno into an ISP
+make bootloader     -- burn the bootloader to the Nano
+make blink          -- upload the Blink.ino sketch to the Nano
+make                -- isp + bootloader + blink
 ```
 
-There are two separate steps involved in burning the bootloader. They are:
+There are three steps involved in burning the bootloader:
 
 #### 1. Make the Uno an ISP
 
-The directory `isp` contains the sketch `ArduinoISP.ino` that will make the Arduino Uno into an ISP as well as the Makefile to upload it to the board. The sketch is found in the Arduino IDE at `Files > Examples > ArduinoISP > ArduinoISP`, modified here to successfully compile using avr-g++. You can see the sketch comments for additional information.
+The directory `isp` contains the sketch `ArduinoISP.ino` that will make the Arduino Uno into an ISP as well as the `Makefile` to upload it to the board. The sketch is found in the Arduino IDE at `Files > Examples > ArduinoISP > ArduinoISP`, modified here to successfully compile using avr-g++. You can see the sketch comments for additional information.
 
 #### 2. Burn Bootloader to Nano
 
-The `bootloader` directory contains a Makefile to burn the bootloader to the Nano. The variable values were found by burning the bootloader using the Arduino IDE with verbose output enabled. (`Arduino > Preferences > Show verbose output during > compilation/upload`).
+The `bootloader` directory contains a `Makefile` to burn the bootloader to the Nano. The variable values were found by burning the bootloader using the Arduino IDE with verbose output enabled. (`Arduino > Preferences > Show verbose output during > compilation/upload`).
+
+#### 3. Test the Nano with the Blink sketch
+
+The `blink` directory contains the `Blink.ino` sketch and the `Makefile` to upload it to the board to confirm the bootloader was successfully burned and the board is in good working order.
 
 Etc
 ---
