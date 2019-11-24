@@ -24,7 +24,7 @@ Requirements
 ---
 
 Software:
-1. You must have the [Arduino IDE](https://www.arduino.cc/en/Main/Software) installed and working.
+- You must have the [Arduino IDE](https://www.arduino.cc/en/Main/Software) installed and working.
 
 Hardware:
 - the Arduino Nano board you wish to burn a bootloader to
@@ -73,7 +73,7 @@ make bootloader     -- burn the bootloader to Nano
 make                -- do both
 ```
 
-There are two seperate steps involved in burning the bootloader. They are:
+There are two separate steps involved in burning the bootloader. They are:
 
 #### 1. Make the Uno an ISP
 
