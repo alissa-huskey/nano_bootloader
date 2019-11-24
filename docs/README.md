@@ -3,6 +3,23 @@ Burn Arduino Nano Bootloader
 
 This project demonstrates how to burn an Arduino Nano bootloader through an Arduino Uno from the command line.
 
+
+<!-- vim-markdown-toc GFM -->
+
+* [Requirements](#requirements)
+* [Instructions](#instructions)
+* [Connection Guide](#connection-guide)
+* [Documentation](#documentation)
+    * [Usage](#usage)
+    * [1. Make the Uno an ISP](#1-make-the-uno-an-isp)
+    * [2. Burn Bootloader to Nano](#2-burn-bootloader-to-nano)
+* [Etc](#etc)
+    * [Further Reading](#further-reading)
+    * [Thanks](#thanks)
+    * [Meta](#meta)
+
+<!-- vim-markdown-toc -->
+
 Requirements
 ---
 
